@@ -169,9 +169,17 @@ SRC_URI="$(cargo_crate_uris)"
 LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions GPL-3+ MIT Unicode-DFS-2016 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="+rife"
 
-DEPEND="media-video/ffmpeg[encode]
-media-video/vapoursynth"
+DEPEND="
+	media-video/ffmpeg[encode]
+	media-libs/vapoursynth
+	media-plugins/vapoursynth-mvtools
+	media-plugins/vapoursynth-adjust
+	media-plugins/vapoursynth-ffmpegsource
+	media-plugins/vapoursynth-havsfunc
+	rife? ( media-plugins/vapoursynth-rife-ncnn-vulkan )
+"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
