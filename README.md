@@ -4,5 +4,5 @@
 
 ```
 eselect ropository add anima git https://github.com/animafps/overlay.git
-emaint sync --auto
+emaint sync -r anima
 ```
